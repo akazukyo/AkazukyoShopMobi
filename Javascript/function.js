@@ -51,7 +51,7 @@ function showMenu() {
 find();
 
 function find() {
-  nav_logo_find.addEventListener("mouseover", function (event) {
+  nav_logo_find.addEventListener("click", function (event) {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
       setTimeout(function () {
