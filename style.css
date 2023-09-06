@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+}
+
+.grid {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .res {
+    height: 50px;
+    margin: 0;
+    background-color: orange;
+  }
+
+  .nav-menu-list {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    animation-name: ani_showMenu;
+    animation-duration: 1000ms;
+  }
+
+  @keyframes ani_showMenu {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 100%;
+    }
+  }
+}
+
+.nav-menu-list ul > li {
+  animation-name: ani_showMenuLi;
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  list-style: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes ani_showMenuLi {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 2;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .res {
+    height: 200px;
+    background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* CSS cho laptop và máy tính để bàn ở đây */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo.find + form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo.find + form > input {
+  width: 0;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+@keyframes ani_showFind {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes ani_showFindClose {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0px;
+  }
+}
