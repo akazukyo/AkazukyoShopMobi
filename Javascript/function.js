@@ -81,6 +81,7 @@ var iconContact = document.querySelector(".contact .fa-plus");
 var iconFB = document.querySelector(".contact .fa-facebook");
 var iconYT = document.querySelector(".contact .fa-youtube");
 var iconTiktok = document.querySelector(".contact .fa-tiktok");
+var iconInstagram = document.querySelector(".contact .fa-instagram");
 var contactElement = document.querySelector(".contact");
 var contactExpanded = false;
 
@@ -140,6 +141,8 @@ function hideContact() {
   iconYT.classList.remove("show");
   iconTiktok.classList.add("hide");
   iconTiktok.classList.remove("show");
+  iconInstagram.classList.add("hide");
+  iconInstagram.classList.remove("show");
 }
 
 function showContact() {
@@ -151,4 +154,6 @@ function showContact() {
   iconYT.classList.remove("hide");
   iconTiktok.classList.add("show");
   iconTiktok.classList.remove("hide");
+  iconInstagram.classList.add("show");
+  iconInstagram.classList.remove("hide");
 }
