@@ -64,18 +64,18 @@ function find() {
     }
   });
 
-  // nav_logo_find.addEventListener("mouseout", function (event) {
-  //   if (nav_logo_find.contains(event.target)) {
-  //     bolshowFind = true;
-  //   }
-  //   if (bolshowFind) {
-  //     setTimeout(function () {
-  //       inputElement.style.width = 0 + "px";
-  //       nav_logo_find_form.style.display = "none";
-  //       bolshowFind = false;
-  //     }, 300);
-  //     inputElement.style.animation = "ani_showFindClose";
-  //     inputElement.style.animationDuration = 0.3 + "s";
-  //   }
-  // });
+  nav_logo_find.addEventListener("click", function (event) {
+    if (!nav_logo_find.contains(event.target)) {
+      bolshowFind = true;
+    }
+    if (bolshowFind) {
+      setTimeout(function () {
+        inputElement.style.width = 0 + "px";
+        nav_logo_find_form.style.display = "none";
+        bolshowFind = false;
+      }, 300);
+      inputElement.style.animation = "ani_showFindClose";
+      inputElement.style.animationDuration = 0.3 + "s";
+    }
+  });
 }
