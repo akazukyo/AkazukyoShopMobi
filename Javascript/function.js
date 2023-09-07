@@ -77,37 +77,40 @@ function find() {
     inputElement.style.animationDuration = "310ms";
   });
 }
-Contact();
 
 var iconContact = document.querySelector(".contact .fa-plus");
 var iconFB = document.querySelector(".contact .fa-facebook");
 var iconYT = document.querySelector(".contact .fa-youtube");
 var iconTiktok = document.querySelector(".contact .fa-tiktok");
-function Contact() {
+var contactExpanded = false;
+
+// Sử dụng sự kiện "click" thay vì "touchstart" để xử lý tương tác trên điện thoại di động.
+document.querySelector(".contact").addEventListener("click", function (event) {
+  if (!contactExpanded) {
+    expandContact();
+  } else {
+    collapseContact();
+  }
+});
+
+function expandContact() {
   var contact = document.querySelector(".contact");
-  var showContactBool = false;
-  contact.addEventListener("touchstart", function (event) {
-    console.log(event.target.className);
-    if (!showContactBool) {
-      contact.style.display = "flex";
-      contact.style.flexDirection = "column";
-      contact.style.overflowY = "auto";
-      contact.style.animation = "test";
-      contact.style.animationDuration = "0.3s";
-      contact.style.animationFillMode = "forwards";
-      contact.focus();
-      showContact();
-      showContactBool = true;
-    }
-  });
-  contact.addEventListener("touchend", function (event) {
-    console.log("alo");
-    if (showContactBool) {
-      contact.style.animation = "test2";
-      hideContact();
-      showContactBool = false;
-    }
-  });
+  contact.style.display = "flex";
+  contact.style.flexDirection = "column";
+  contact.style.overflowY = "auto";
+  contact.style.animation = "test";
+  contact.style.animationDuration = "0.3s";
+  contact.style.animationFillMode = "forwards";
+  contact.focus();
+  showContact();
+  contactExpanded = true;
+}
+
+function collapseContact() {
+  var contact = document.querySelector(".contact");
+  contact.style.animation = "test2";
+  hideContact();
+  contactExpanded = false;
 }
 
 function hideContact() {
