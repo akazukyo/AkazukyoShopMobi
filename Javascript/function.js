@@ -81,25 +81,34 @@ var iconContact = document.querySelector(".contact .fa-plus");
 var iconFB = document.querySelector(".contact .fa-facebook");
 var iconYT = document.querySelector(".contact .fa-youtube");
 var iconTiktok = document.querySelector(".contact .fa-tiktok");
+var contactElement = document.querySelector(".contact");
 var contactExpanded = false;
 
-// Sử dụng sự kiện "click" trên toàn bộ trang.
-document.addEventListener("click", function (event) {
-  var contact = document.querySelector(".contact");
-  if (contactExpanded && !contact.contains(event.target)) {
-    // Nếu Contact đã mở rộng và sự kiện click không xảy ra trong Contact,
-    // thì thu gọn Contact.
-    collapseContact();
-  }
-});
+function addMultipleEventListener(element, events, handler) {
+  events.forEach((e) => element.addEventListener(e, handler));
+}
+// addMultipleEventListener(
+//   contactElement,
+//   ["click", "touchmove"],
+//   function (event) {
+//     if (!contactExpanded) {
+//       expandContact();
+//     } else {
+//       collapseContact();
+//     }
+//   }
+// );
 
-// Sử dụng sự kiện "click" trên phần Contact để mở rộng hoặc thu gọn.
-document.querySelector(".contact").addEventListener("click", function (event) {
+contactElement.addEventListener("click", function (event) {
   if (!contactExpanded) {
     expandContact();
   } else {
     collapseContact();
   }
+});
+
+document.addEventListener("touchmove", function (event) {
+  collapseContact();
 });
 
 function expandContact() {
