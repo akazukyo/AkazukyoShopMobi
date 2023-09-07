@@ -132,7 +132,8 @@ body {
   background-color: aqua;
   border-radius: 20px;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .item.hide {
