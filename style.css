@@ -99,13 +99,13 @@ body {
     width: 0px;
   }
   100% {
-    width: 120px;
+    width: 180px;
   }
 }
 
 @keyframes ani_showFindClose {
   0% {
-    width: 120px;
+    width: 180px;
   }
   100% {
     width: 0px;

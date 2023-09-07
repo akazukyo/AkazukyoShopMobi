@@ -55,7 +55,7 @@ function find() {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
       setTimeout(function () {
-        inputElement.style.width = "120px";
+        inputElement.style.width = "180px";
         bolshowFind = true;
         inputElement.focus();
       }, 300);
@@ -65,16 +65,12 @@ function find() {
   });
 
   inputElement.addEventListener("blur", function (event) {
-    // blur là thoát tương tác
-    if (bolshowFind) {
-      setTimeout(function () {
-        inputElement.style.width = "0px";
-        nav_logo_find_form.style.display = "none";
-        bolshowFind = false;
-      }, 300);
-      inputElement.style.animation = "ani_showFindClose";
-      inputElement.style.animationDuration = "310ms";
-      body.focus();
-    }
+    setTimeout(function () {
+      inputElement.style.width = "0px";
+      nav_logo_find_form.style.display = "none";
+      bolshowFind = false;
+    }, 300);
+    inputElement.style.animation = "ani_showFindClose";
+    inputElement.style.animationDuration = "310ms";
   });
 }
