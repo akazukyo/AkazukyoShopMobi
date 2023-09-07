@@ -89,12 +89,21 @@ function Contact() {
   contact.addEventListener("touchstart", function (event) {
     console.log(event.target.className);
     if (!showContactBool) {
+      contact.style.display = "flex";
+      contact.style.flexDirection = "column";
+      contact.style.overflowY = "auto";
+      contact.style.animation = "test";
+      contact.style.animationDuration = "0.3s";
+      contact.style.animationFillMode = "forwards";
+      contact.focus();
       showContact();
       showContactBool = true;
     }
   });
-  document.addEventListener("touchend", function (event) {
-    if (!contact.contains(event.target) && showContactBool) {
+  contact.addEventListener("blur", function (event) {
+    console.log("alo");
+    if (showContactBool) {
+      contact.style.animation = "test2";
       hideContact();
       showContactBool = false;
     }

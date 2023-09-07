@@ -179,15 +179,16 @@ body {
   }
 }
 
-.contact:hover,
-.contact:active {
-  animation: test 0.5s forwards;
-  animation: name duration timing-function delay iteration-count direction
-    fill-mode;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  white-space: nowrap;
+@keyframes test2 {
+  0% {
+    height: 200px;
+    top: 450px;
+  }
+  100% {
+    right: 0px;
+    top: 600px;
+    height: 50px;
+  }
 }
 
 .contact .hide {
