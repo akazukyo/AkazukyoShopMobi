@@ -64,6 +64,7 @@ function find() {
   });
 
   inputElement.addEventListener("blur", function (event) {
+    // blur là thoát tương tác
     if (bolshowFind) {
       setTimeout(function () {
         inputElement.style.width = 0 + "px";
