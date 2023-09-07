@@ -54,10 +54,10 @@ function find() {
   nav_logo_find.addEventListener("touchstart", function (event) {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
+      inputElement.focus();
       setTimeout(function () {
         inputElement.style.width = "180px";
         bolshowFind = true;
-        inputElement.focus();
       }, 300);
       inputElement.style.animation = "ani_showFind";
       inputElement.style.animationDuration = "310ms";
