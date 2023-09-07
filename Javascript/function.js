@@ -100,7 +100,7 @@ function Contact() {
       showContactBool = true;
     }
   });
-  contact.addEventListener("blur", function (event) {
+  contact.addEventListener("touchend", function (event) {
     console.log("alo");
     if (showContactBool) {
       contact.style.animation = "test2";
