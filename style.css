@@ -21,8 +21,7 @@ body {
     position: fixed;
     right: 0;
     top: 50px;
-    animation-name: ani_showMenu;
-    animation-duration: 1000ms;
+    animation: ani_showMenu 1s forwards;
   }
 
   @keyframes ani_showMenu {
@@ -36,9 +35,7 @@ body {
 }
 
 .nav-menu-list ul > li {
-  animation-name: ani_showMenuLi;
-  animation-duration: 0.4s;
-  animation-delay: 0s;
+  animation: ani_showMenuLi 0.4s 0s;
   list-style: none;
   font-family: "Courier New", Courier, monospace;
 }
@@ -90,7 +87,7 @@ body {
 }
 
 .nav-logo.find + form > input {
-  width: 0;
+  animation-fill-mode: forwards;
 }
 
 .nav-menu {

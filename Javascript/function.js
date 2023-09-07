@@ -54,25 +54,25 @@ function find() {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
       setTimeout(function () {
-        inputElement.style.width = 200 + "px";
-        inputElement.focus();
+        inputElement.style.width = "200px";
         bolshowFind = true;
       }, 300);
       inputElement.style.animation = "ani_showFind";
-      inputElement.style.animationDuration = 0.3 + "s";
+      inputElement.style.animationDuration = "310ms";
     }
+    inputElement.focus();
   });
 
   inputElement.addEventListener("blur", function (event) {
     // blur là thoát tương tác
     if (bolshowFind) {
       setTimeout(function () {
-        inputElement.style.width = 0 + "px";
+        inputElement.style.width = "0px";
         nav_logo_find_form.style.display = "none";
         bolshowFind = false;
       }, 300);
       inputElement.style.animation = "ani_showFindClose";
-      inputElement.style.animationDuration = 0.3 + "s";
+      inputElement.style.animationDuration = "310ms";
     }
   });
 }
