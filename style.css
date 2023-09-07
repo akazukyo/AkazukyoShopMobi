@@ -118,7 +118,7 @@ body {
 }
 
 .product {
-  background-color: red;
+  background-color: rgb(89, 0, 255);
   white-space: nowrap;
   width: 100%;
   text-align: center;
@@ -129,7 +129,7 @@ body {
   display: inline-block;
   height: 250px;
   width: 190px;
-  background-color: aqua;
+  background-color: rgb(255, 0, 128);
   border-radius: 20px;
   text-align: center;
   margin-right: 5px;
