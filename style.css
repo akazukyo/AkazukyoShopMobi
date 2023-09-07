@@ -116,3 +116,30 @@ body {
   background-color: red;
   height: 1000px;
 }
+
+.product {
+  background-color: red;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.item {
+  display: inline-block;
+  height: 250px;
+  width: 190px;
+  background-color: aqua;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.item.hide {
+  display: none;
+}
+
+.item img {
+  width: 70%;
+  height: 70%;
+}
