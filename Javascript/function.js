@@ -1,4 +1,5 @@
 var show = false;
+var showContactBool = false;
 var bolshowFind = false;
 var body = document.querySelectorAll("body");
 var content = document.querySelector(".content");
@@ -11,6 +12,8 @@ var inputElement = document.querySelector(".inputFind");
 var ulElement = document.querySelector(".test");
 var liElements = ulElement.querySelectorAll("li");
 var numberOfLiElements = liElements.length;
+
+find();
 
 function showMenu() {
   if (!show) {
@@ -32,23 +35,20 @@ function showFind() {
   if (!bolshowFind) {
     nav_logo_find_form.style.display = "flex";
     setTimeout(function () {
-      inputElement.style.width = 200 + "px";
+      inputElement.style.width = "180px";
       bolshowFind = true;
     }, 300);
 
     inputElement.style.animation = "ani_showFind";
-    inputElement.style.animationDuration = 0.3 + "s";
   } else {
     setTimeout(function () {
-      inputElement.style.width = 0 + "px";
+      inputElement.style.width = "0px";
       nav_logo_find_form.style.display = "none";
       bolshowFind = false;
     }, 300);
     inputElement.style.animation = "ani_showFindClose";
-    inputElement.style.animationDuration = 0.3 + "s";
   }
 }
-find();
 
 function find() {
   nav_logo_find.addEventListener("touchstart", function (event) {
@@ -75,5 +75,30 @@ function find() {
     }, 300);
     inputElement.style.animation = "ani_showFindClose";
     inputElement.style.animationDuration = "310ms";
+  });
+}
+showContact();
+function showContact() {
+  var iconContact = document.querySelector(".contact .fa-plus");
+  var iconFB = document.querySelector(".contact .fa-facebook");
+  var iconYT = document.querySelector(".contact .fa-youtube");
+  var iconTiktok = document.querySelector(".contact .fa-tiktok");
+  iconContact.addEventListener("touchstart", function (event) {
+    console.log();
+    if (event.target.className == "show fa-solid fa-plus fa-2x") {
+      iconContact.classList.remove("show");
+      iconContact.classList.add("hide");
+      iconFB.classList.add("show");
+      iconYT.classList.add("show");
+      iconTiktok.classList.add("show");
+      showContactBool = true;
+    }
+  });
+  iconContact.addEventListener("blur", function (event) {
+    iconContact.classList.remove("hide");
+    iconContact.classList.add("show");
+    iconFB.classList.add("hide");
+    iconYT.classList.add("hide");
+    iconTiktok.classList.add("hide");
   });
 }
