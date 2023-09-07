@@ -54,7 +54,7 @@ function find() {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
       setTimeout(function () {
-        inputElement.style.width = "150px";
+        inputElement.style.width = "120px";
         bolshowFind = true;
       }, 300);
       inputElement.style.animation = "ani_showFind";
