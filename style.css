@@ -132,8 +132,7 @@ body {
   background-color: rgb(255, 0, 128);
   border-radius: 20px;
   text-align: center;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .item.hide {
