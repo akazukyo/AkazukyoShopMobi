@@ -51,7 +51,7 @@ function showMenu() {
 find();
 
 function find() {
-  nav_logo_find.addEventListener("click", function (event) {
+  nav_logo_find.addEventListener("touchstart", function (event) {
     if (nav_logo_find.contains(event.target) && !bolshowFind) {
       nav_logo_find_form.style.display = "flex";
       setTimeout(function () {
@@ -64,8 +64,9 @@ function find() {
     }
   });
 
-  nav_logo_find.addEventListener("click", function (event) {
-    if (!nav_logo_find.contains(event.target)) {
+  inputElement.addEventListener("touchstart", function (event) {
+    console.log(event.target.id != "inputFind");
+    if (event.target.id != "inputFind") {
       bolshowFind = true;
     }
     if (bolshowFind) {
