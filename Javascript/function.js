@@ -1,5 +1,6 @@
 var show = false;
 var bolshowFind = false;
+var body = document.querySelectorAll("body");
 var content = document.querySelector(".content");
 var nav_menu_list = document.querySelector(".nav-menu-list");
 var nav_logo_find = document.querySelector(".nav-logo.find");
@@ -56,11 +57,11 @@ function find() {
       setTimeout(function () {
         inputElement.style.width = "120px";
         bolshowFind = true;
+        inputElement.focus();
       }, 300);
       inputElement.style.animation = "ani_showFind";
       inputElement.style.animationDuration = "310ms";
     }
-    inputElement.focus();
   });
 
   inputElement.addEventListener("blur", function (event) {
@@ -73,6 +74,7 @@ function find() {
       }, 300);
       inputElement.style.animation = "ani_showFindClose";
       inputElement.style.animationDuration = "310ms";
+      body.focus();
     }
   });
 }
