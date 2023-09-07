@@ -60,8 +60,9 @@ function find() {
       inputElement.style.animation = "ani_showFind";
       inputElement.style.animationDuration = "310ms";
     }
+    inputElement.focus();
   });
-  inputElement.focus();
+
   inputElement.addEventListener("blur", function (event) {
     // blur là thoát tương tác
     if (bolshowFind) {
