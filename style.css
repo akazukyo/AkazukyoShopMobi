@@ -182,6 +182,8 @@ body {
 .contact:hover,
 .contact:active {
   animation: test 0.5s forwards;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
   display: flex;
   flex-direction: column;
   overflow-y: auto;

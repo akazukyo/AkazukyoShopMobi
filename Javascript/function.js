@@ -1,5 +1,5 @@
 var show = false;
-var showContactBool = false;
+
 var bolshowFind = false;
 var body = document.querySelectorAll("body");
 var content = document.querySelector(".content");
@@ -79,26 +79,40 @@ function find() {
 }
 showContact();
 function showContact() {
+  var contact = document.querySelector(".contact");
   var iconContact = document.querySelector(".contact .fa-plus");
   var iconFB = document.querySelector(".contact .fa-facebook");
   var iconYT = document.querySelector(".contact .fa-youtube");
   var iconTiktok = document.querySelector(".contact .fa-tiktok");
-  iconContact.addEventListener("touchstart", function (event) {
-    console.log();
-    if (event.target.className == "show fa-solid fa-plus fa-2x") {
+  var showContactBool = false;
+  contact.addEventListener("click", function (event) {
+    console.log(event.target.className);
+    if (!showContactBool) {
       iconContact.classList.remove("show");
       iconContact.classList.add("hide");
+
       iconFB.classList.add("show");
+      iconFB.classList.remove("hide");
+
       iconYT.classList.add("show");
+      iconYT.classList.remove("hide");
+
       iconTiktok.classList.add("show");
+      iconTiktok.classList.remove("hide");
       showContactBool = true;
     }
   });
-  iconContact.addEventListener("blur", function (event) {
-    iconContact.classList.remove("hide");
-    iconContact.classList.add("show");
-    iconFB.classList.add("hide");
-    iconYT.classList.add("hide");
-    iconTiktok.classList.add("hide");
+  document.addEventListener("click", function (event) {
+    if (!contact.contains(event.target) && showContactBool) {
+      iconContact.classList.add("show");
+      iconContact.classList.remove("hide");
+      iconFB.classList.add("hide");
+      iconFB.classList.remove("show");
+      iconYT.classList.add("hide");
+      iconYT.classList.remove("show");
+      iconTiktok.classList.add("hide");
+      iconTiktok.classList.remove("show");
+      showContactBool = false;
+    }
   });
 }
