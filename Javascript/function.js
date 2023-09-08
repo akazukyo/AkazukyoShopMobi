@@ -91,6 +91,7 @@ function addMultipleEventListener(element, events, handler) {
 // addMultipleEventListener(
 //   contactElement,
 //   ["click", "touchmove"],
+
 //   function (event) {
 //     if (!contactExpanded) {
 //       expandContact();
@@ -108,8 +109,11 @@ contactElement.addEventListener("click", function (event) {
   }
 });
 
-document.addEventListener("touchmove", function (event) {
-  collapseContact();
+addMultipleEventListener(document, ["touchmove", "click"], function (e) {
+  console.log(e.target.className);
+  if (e.target.className != "fa-solid fa-plus fa-2x hide") {
+    collapseContact();
+  }
 });
 
 function expandContact() {

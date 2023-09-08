@@ -169,68 +169,51 @@ body {
   top: 600px;
 }
 
-.contact i {
-  border: 2px;
-  border-radius: 100%;
-  border-style: solid;
-  display: flex;
-  height: 40px;
+.contact a {
+  text-decoration: none;
+}
+
+.contact a i {
   line-height: 1.3;
+  border: 2px !important;
+  border-radius: 100%;
+  border-style: solid !important;
+
+  height: 40px;
+  width: 40px;
+}
+
+.fa-facebook:before,
+.fa-youtube:before,
+.fa-tiktok:before,
+.fa-instagram:before {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact i:nth-child(1) {
-  border: none;
-}
-
-.contact i:nth-child(2) {
-  width: 37px;
-  padding-left: 6px;
-  border-color: #4388fe;
-}
-.contact i:nth-child(3) {
-  width: 38px;
-  padding-left: 5.1px;
-  border-color: #ff0000;
-}
-
-.contact i:nth-child(4) {
-  width: 35px;
-  padding-left: 10px;
-  border-color: black;
-}
-.contact i:nth-child(5) {
-  width: 36px;
-  padding-left: 9px;
-  border-color: #f09433;
-  border-color: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
+.fa-instagram:before {
+  color: transparent;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
   );
-  border-color: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  border-color: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-}
 
+  border-color: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  background-clip: text, border-box;
+  -webkit-background-clip: text, border-box;
+}
 @keyframes test {
   0% {
     right: 0px;
@@ -254,9 +237,9 @@ body {
 }
 
 .contact .hide {
-  display: none;
+  display: none !important;
 }
 
-.contact .show {
-  display: block;
+.contact a .show {
+  display: block !important;
 }
