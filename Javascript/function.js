@@ -184,34 +184,92 @@ var y = null;
 // function getMouseY() {
 //   return y;
 // }
-var boolMove = false;
-var x = 0;
-var y = 0;
-var xOther = 0;
-var yOther = 0;
+// var boolMove = false;
+// var x = 0;
+// var y = 0;
+// var xOther = 0;
+// var yOther = 0;
 
-updatePosition();
-function updatePosition() {
-  document.querySelector(".dot").addEventListener("mousedown", function (e) {
-    if (e.target.className == "dot") {
-      boolMove = true;
-    }
-  });
+// updatePosition();
+// function updatePosition() {
+//   document.querySelector(".dot").addEventListener("mousedown", function (e) {
+//     if (e.target.className == "dot") {
+//       boolMove = true;
+//     }
+//   });
 
-  addMultipleEventListener(document, ["mousemove", "mouseup"], test);
-  requestAnimationFrame(test);
-}
+//   addMultipleEventListener(document, ["mousemove", "mouseup"], test);
+//   requestAnimationFrame(test);
+// }
 
-function test(e) {
-  if (boolMove) {
-    console.log("alo");
-    x = e.clientX;
-    y = e.clientY;
-    if ((boolMove && xOther != x) || yOther != y) {
-      xOther = x;
-      yOther = y;
-    }
-    document.querySelector(".dot").style.left = xOther - 50 + "px";
-    document.querySelector(".dot").style.top = yOther - 50 + "px";
-  }
-}
+// function test(e) {
+//   if (boolMove) {
+//     console.log("alo");
+//     x = e.clientX;
+//     y = e.clientY;
+//     keyframesRule.
+//     if ((boolMove && xOther != x) || yOther != y) {
+//       xOther = x;
+//       yOther = y;
+//     }
+//     document.querySelector(".dot").style.left = xOther - 50 + "px";
+//     document.querySelector(".dot").style.top = yOther - 50 + "px";
+//   }
+// }
+
+// var styleSheet = document.styleSheets[0];
+
+// var keyframesRule = `@keyframes testDot {
+//   0% { left: 0px; top: 300px; }
+//   100% { left: 0px; top:300px; }
+// }`;
+
+// styleSheet.insertRule(keyframesRule, styleSheet.cssRules.length);
+
+// script.js
+let isDragging = false;
+let offsetX, offsetY;
+
+const draggableElement = document.querySelector(".dot");
+
+draggableElement.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+  offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  const x = e.clientX - offsetX;
+  const y = e.clientY - offsetY;
+
+  draggableElement.style.left = x + "px";
+  draggableElement.style.top = y + "px";
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+draggableElement.addEventListener("touchstart", (e) => {
+  isDragging = true;
+  const touch = e.touches[0];
+  offsetX = touch.clientX - draggableElement.getBoundingClientRect().left;
+  offsetY = touch.clientY - draggableElement.getBoundingClientRect().top;
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+
+  const touch = e.touches[0];
+  const x = touch.clientX - offsetX;
+  const y = touch.clientY - offsetY;
+
+  draggableElement.style.left = x + "px";
+  draggableElement.style.top = y + "px";
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+});

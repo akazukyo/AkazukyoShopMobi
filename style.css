@@ -249,4 +249,5 @@ body {
   width: 100px;
   background-color: red;
   border-radius: 50%;
+  animation: testDot 0.3s forwards;
 }
