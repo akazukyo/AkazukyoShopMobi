@@ -180,17 +180,22 @@ body {
 }
 .contact {
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   justify-content: space-evenly;
-  justify-items: center;
   align-items: center;
-  height: 50px;
+  max-height: 50px;
   width: 50px;
   background-color: gainsboro;
   border-radius: 30px;
   right: 0px;
-  top: 600px;
+  bottom: 100px; /* Thay top thành bottom để mở rộng lên trên */
+  transition: max-height 0.3s;
+}
+
+.contact.show {
+  max-height: 200px;
+  min-height: 50px;
 }
 
 .contact a {
