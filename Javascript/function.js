@@ -110,8 +110,7 @@ contactElement.addEventListener("click", function (event) {
 });
 
 addMultipleEventListener(document, ["touchmove", "click"], function (e) {
-  console.log(e.target.className);
-  if (e.target.className != "fa-solid fa-plus fa-2x hide") {
+  if (e.target.className != "fa-solid fa-plus fa-2x hide" && contactExpanded) {
     collapseContact();
   }
 });
@@ -132,6 +131,10 @@ function expandContact() {
 function collapseContact() {
   var contact = document.querySelector(".contact");
   contact.style.animation = "test2";
+  contact.style.animationDuration = "0.3s";
+  contact.style.flexDirection = "column";
+  contact.style.overflowY = "auto";
+  contact.style.animationFillMode = "forwards";
   hideContact();
   contactExpanded = false;
 }
@@ -161,3 +164,48 @@ function showContact() {
   iconInstagram.classList.add("show");
   iconInstagram.classList.remove("hide");
 }
+
+var x = null;
+var y = null;
+// onMouseUpdate();
+// document.addEventListener("mousemove", onMouseUpdate, false);
+// document.addEventListener("mouseenter", onMouseUpdate, false);
+
+// function onMouseUpdate(e) {
+//   x = e.pageX;
+//   y = e.pageY;
+//   console.log(x, y);
+// }
+
+// function getMouseX() {
+//   return x;
+// }
+
+// function getMouseY() {
+//   return y;
+// }
+var boolMove = false;
+var x = 0;
+var y = 0;
+
+updatePosition();
+function updatePosition() {
+  document.querySelector(".dot").addEventListener("mousedown", function (e) {
+    boolMove = true;
+  });
+
+  addMultipleEventListener(document, ["mousemove", "mouseup"], function (e) {
+    console.log(boolMove);
+    if (boolMove) {
+      x = e.clientX;
+      y = e.clientY;
+      document.querySelector(".dot").style.left = x - 50 + "px";
+      document.querySelector(".dot").style.top = y - 50 + "px";
+      boolMove = false;
+    }
+  });
+}
+
+document.addEventListener("", function (e) {
+  boolMove = true;
+});
