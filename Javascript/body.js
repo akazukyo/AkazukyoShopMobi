@@ -1,7 +1,5 @@
 import products from "./data.js";
 
-console.log(products);
-
 const container = document.querySelector(".container");
 
 products.forEach((product) => {

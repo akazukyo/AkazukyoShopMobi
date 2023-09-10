@@ -187,25 +187,31 @@ var y = null;
 var boolMove = false;
 var x = 0;
 var y = 0;
+var xOther = 0;
+var yOther = 0;
 
 updatePosition();
 function updatePosition() {
   document.querySelector(".dot").addEventListener("mousedown", function (e) {
-    boolMove = true;
-  });
-
-  addMultipleEventListener(document, ["mousemove", "mouseup"], function (e) {
-    console.log(boolMove);
-    if (boolMove) {
-      x = e.clientX;
-      y = e.clientY;
-      document.querySelector(".dot").style.left = x - 50 + "px";
-      document.querySelector(".dot").style.top = y - 50 + "px";
-      boolMove = false;
+    if (e.target.className == "dot") {
+      boolMove = true;
     }
   });
+
+  addMultipleEventListener(document, ["mousemove", "mouseup"], test);
+  requestAnimationFrame(test);
 }
 
-document.addEventListener("", function (e) {
-  boolMove = true;
-});
+function test(e) {
+  if (boolMove) {
+    console.log("alo");
+    x = e.clientX;
+    y = e.clientY;
+    if ((boolMove && xOther != x) || yOther != y) {
+      xOther = x;
+      yOther = y;
+    }
+    document.querySelector(".dot").style.left = xOther - 50 + "px";
+    document.querySelector(".dot").style.top = yOther - 50 + "px";
+  }
+}
