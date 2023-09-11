@@ -90,6 +90,7 @@ contact.addEventListener("touchstart", (e) => {
   initialY = touch.clientY;
   offsetX = contact.getBoundingClientRect().right - initialX;
   offsetY = contact.getBoundingClientRect().bottom - initialY;
+  disableScroll();
 });
 
 document.addEventListener("touchmove", (e) => {
@@ -100,13 +101,14 @@ document.addEventListener("touchmove", (e) => {
 
   contact.style.right = window.innerWidth - x + "px";
   contact.style.bottom = window.innerHeight - y + "px";
-
+  disableScroll();
   document.body.style.touchAction = "none";
 });
 
 document.addEventListener("touchend", () => {
   isDragging = false;
   document.body.style.touchAction = "auto";
+  enableScroll();
 });
 
 function disableScroll() {
@@ -120,6 +122,3 @@ function enableScroll() {
 function preventDefault(e) {
   e.preventDefault();
 }
-
-disableScroll();
-enableScroll();
