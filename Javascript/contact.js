@@ -94,13 +94,13 @@ contact.addEventListener("touchstart", (e) => {
 
 document.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
-  e.preventDefault();
   const touch = e.touches[0];
   const x = touch.clientX + offsetX;
   const y = touch.clientY + offsetY;
 
   contact.style.right = window.innerWidth - x + "px";
   contact.style.bottom = window.innerHeight - y + "px";
+  document.body.style.overflow = "hidden";
 });
 
 document.addEventListener("touchend", () => {
