@@ -94,9 +94,7 @@ contact.addEventListener("touchstart", (e) => {
 
 document.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
-  document.body.addEventListener("touchmove", function (e) {
-    e.preventDefault();
-  });
+  e.preventDefault();
   const touch = e.touches[0];
   const x = touch.clientX + offsetX;
   const y = touch.clientY + offsetY;
