@@ -100,7 +100,6 @@ document.addEventListener("touchmove", (e) => {
 
   contact.style.right = window.innerWidth - x + "px";
   contact.style.bottom = window.innerHeight - y + "px";
-  document.body.style.overflow = "hidden";
 });
 
 document.addEventListener("touchend", () => {
