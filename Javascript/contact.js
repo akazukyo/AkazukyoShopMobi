@@ -100,8 +100,11 @@ document.addEventListener("touchmove", (e) => {
 
   contact.style.right = window.innerWidth - x + "px";
   contact.style.bottom = window.innerHeight - y + "px";
+
+  document.body.style.touchAction = "none";
 });
 
 document.addEventListener("touchend", () => {
   isDragging = false;
+  document.body.style.touchAction = "auto";
 });
