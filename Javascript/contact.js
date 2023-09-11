@@ -112,13 +112,14 @@ document.addEventListener("touchend", () => {
 });
 
 function disableScroll() {
-  window.addEventListener("scroll", preventDefault);
+  document.addEventListener("scroll", preventDefault);
 }
 
 function enableScroll() {
-  window.removeEventListener("scroll", preventDefault);
+  document.removeEventListener("scroll", preventDefault);
 }
 
 function preventDefault(e) {
   e.preventDefault();
+  console.log("alo");
 }
