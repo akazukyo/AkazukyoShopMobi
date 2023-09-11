@@ -113,14 +113,13 @@ function disableScroll() {
   window.addEventListener("scroll", preventDefault);
 }
 
-// Bỏ chặn sự kiện cuộn trang sau một khoảng thời gian cụ thể
 function enableScroll() {
   window.removeEventListener("scroll", preventDefault);
 }
 
-// Chặn sự kiện cuộn trang
 function preventDefault(e) {
   e.preventDefault();
 }
 
 disableScroll();
+enableScroll();
