@@ -90,36 +90,38 @@ contact.addEventListener("touchstart", (e) => {
   initialY = touch.clientY;
   offsetX = contact.getBoundingClientRect().right - initialX;
   offsetY = contact.getBoundingClientRect().bottom - initialY;
-  disableScroll();
+  // disableScroll();
+  window.onscroll = () => window.scroll(0, 0);
 });
 
 document.addEventListener("touchmove", (e) => {
   if (!isDragging) return;
+  window.sco;
   const touch = e.touches[0];
   const x = touch.clientX + offsetX;
   const y = touch.clientY + offsetY;
 
   contact.style.right = window.innerWidth - x + "px";
   contact.style.bottom = window.innerHeight - y + "px";
-  disableScroll();
+  // disableScroll();
   document.body.style.touchAction = "none";
 });
 
 document.addEventListener("touchend", () => {
   isDragging = false;
   document.body.style.touchAction = "auto";
-  enableScroll();
+  // enableScroll();
 });
 
-function disableScroll() {
-  document.addEventListener("scroll", preventDefault);
-}
+// function disableScroll() {
+//   document.addEventListener("scroll", preventDefault);
+// }
 
-function enableScroll() {
-  document.removeEventListener("scroll", preventDefault);
-}
+// function enableScroll() {
+//   document.removeEventListener("scroll", preventDefault);
+// }
 
-function preventDefault(e) {
-  e.preventDefault();
-  console.log("alo");
-}
+// function preventDefault(e) {
+//   e.preventDefault();
+//   console.log("alo");
+// }
