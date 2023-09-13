@@ -254,11 +254,6 @@ body {
   position: relative;
 }
 
-img.showIMG {
-  width: 100%;
-  height: 200px;
-}
-
 div img.image-class {
   height: 50px;
   width: 50px;
@@ -266,21 +261,55 @@ div img.image-class {
   border: 3px solid red;
 }
 
-.listProduct {
-  width: fit-content;
+#listProduct {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.hot {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+}
+
+img.showIMG {
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
 }
 
 .showIMGAnimation {
   position: absolute;
   width: 0;
   height: 0;
-  bottom: 0px;
-  z-index: 100;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
   color: red;
 }
 
 .showIMGAnimation.active {
-  height: 200px;
+  height: 100%;
   width: 100%;
   transition: height 1.5s, width 1.5s;
 }
+
+/* .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 2s ease-in;
+  background-color: red;
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 1;
+  }
+} */

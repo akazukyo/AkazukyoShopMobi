@@ -1,0 +1,147 @@
+body {
+  margin: 0 5% 2%;
+  height: 100%;
+}
+
+div {
+  margin: 10px 0px;
+}
+
+.grid {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-buy {
+    position: fixed;
+    font-size: large;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #65c18c;
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    bottom: 2%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .img-product {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+  }
+
+  .img-product img {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .img-product-option {
+    width: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .img-product-option img {
+    width: 18%;
+    height: 60px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .img-product-option img.active {
+    border: 3px solid #65c18c;
+    border-radius: 10px;
+  }
+
+  .info-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    grid-row-gap: 0px;
+    height: 50px;
+    white-space: center;
+  }
+
+  .info-product span {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .info-product h1 {
+    font-size: 20px;
+    line-height: 0px;
+  }
+
+  .info-product i p {
+    display: inline;
+    color: black;
+    font-size: 14px;
+  }
+
+  .option-product span {
+    display: flex;
+    flex-direction: column;
+  }
+  .option-product input {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .custom-radio {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkbox-label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color: #000;
+    border-radius: 30px;
+    margin: 0px 5px;
+  }
+
+  .custom-radio input:checked + .checkbox-label {
+    background-color: #65c18c;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 1025px) {
+  /* CSS cho laptop và máy tính để bàn ở đây */
+}
