@@ -1,5 +1,5 @@
 body {
-  margin: 0 5% 2%;
+  margin: 0 5% 0;
   height: 100%;
 }
 
@@ -13,24 +13,42 @@ div {
 
 @media only screen and (max-width: 767px) {
   nav {
-    position: sticky;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
     top: 0;
+    z-index: 100;
+    background-color: white;
   }
-  .btn-buy {
+  .product {
+    margin-top: 55px;
+    z-index: 99;
+  }
+
+  .footer-form {
     position: fixed;
+    height: 65px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .btn-buy {
+    position: relative;
     font-size: large;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: rgba(255, 255, 255, 0.7);
     background-color: #65c18c;
-    width: 90%;
     height: 50px;
     border-radius: 5px;
     border: none;
-    bottom: 2%;
+    width: 90%;
     left: 5%;
     right: 5%;
   }
@@ -60,11 +78,11 @@ div {
     height: 60px;
     display: inline-block;
     position: relative;
+    border-radius: 10px;
   }
 
   .img-product-option img.active {
     border: 3px solid #65c18c;
-    border-radius: 10px;
   }
 
   .info-product {
