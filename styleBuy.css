@@ -1,11 +1,11 @@
 body {
-  margin: 0 5% 0;
+  margin: 0 5% 20%;
   height: 100%;
 }
 
-div {
+/* div {
   margin: 10px 0px;
-}
+} */
 
 .grid {
   width: 100%;
@@ -23,12 +23,17 @@ div {
     z-index: 100;
     background-color: white;
   }
-  .product {
+
+  #product {
     margin-top: 55px;
     z-index: 99;
   }
 
-  .footer-form {
+  form * {
+    margin: 5px 0px;
+  }
+
+  .product-submit {
     position: fixed;
     height: 65px;
     background-color: white;
@@ -36,7 +41,6 @@ div {
     left: 0;
     right: 0;
     width: 100%;
-    margin: 0px;
   }
 
   .btn-buy {
@@ -53,27 +57,27 @@ div {
     right: 5%;
   }
 
-  .img-product {
+  .product-img-main {
     position: relative;
     width: 100%;
     padding-top: 100%;
   }
 
-  .img-product img {
+  .product-img-main img {
     top: 0;
     position: absolute;
     height: 100%;
     width: 100%;
   }
 
-  .img-product-option {
+  .product-img-option {
     width: 100%;
     overflow-y: auto;
     white-space: nowrap;
     align-items: center;
   }
 
-  .img-product-option img {
+  .product-img-option img {
     width: 18%;
     height: 60px;
     display: inline-block;
@@ -81,44 +85,38 @@ div {
     border-radius: 10px;
   }
 
-  .img-product-option img.active {
+  .product-img-option img.active {
     border: 3px solid #65c18c;
   }
 
-  .info-product {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    grid-row-gap: 0px;
-    height: 50px;
-    white-space: center;
+  .product-info {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
   }
 
-  .info-product span {
+  .product-info i {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    height: 20px;
+  }
+
+  .product-info-descriptions * {
+    margin: 5px 0px;
+  }
+
+  .product-info-descriptions h3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .product-option h3 {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
 
-  .info-product h1 {
-    font-size: 20px;
-    line-height: 0px;
-  }
-
-  .info-product i p {
-    display: inline;
-    color: black;
-    font-size: 14px;
-  }
-
-  .option-product span {
-    display: flex;
-    flex-direction: column;
-  }
-  .option-product input {
+  .product-option input {
     display: flex;
     flex-direction: row;
     display: inline-block;

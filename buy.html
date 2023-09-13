@@ -21,13 +21,13 @@
       <span><i class="fa-solid fa-bars fa-2x"></i></span
       ><!-- lua chon khác-->
     </nav>
-    <div class="product">
+    <div id="product">
       <!-- mot so hinh anh cua san pham-->
-      <div class="img-product">
+      <div class="product-img-main">
         <img src="https://picsum.photos/id/684/600/400" alt="" />
       </div>
       <!-- anh san pham -->
-      <div class="img-product-option">
+      <div class="product-img-option">
         <img class="active" src="https://picsum.photos/id/683/600/400" alt="" />
         <img src="https://picsum.photos/id/682/600/400" alt="" />
         <img src="https://picsum.photos/id/681/600/400" alt="" />
@@ -37,71 +37,82 @@
       </div>
       <!--cac lua chon de hien thi-->
     </div>
-    <form action="">
-      <div class="info-product">
-        <span>
-          <h1>Iphone 14 ProMax</h1>
-          <h1>20.000.000 đ</h1>
-        </span>
-        <i class="fa-solid fa-star" style="color: #ffbb00"> <p>5</p> </i>
+
+    <form class="product-buy" action="">
+      <div class="product-info">
+        <h2>Iphone 14 ProMax</h2>
+        <i class="fa-solid fa-star" style="color: #ffbb00">5</i>
+        <h2>20.000.000 đ</h2>
       </div>
       <!-- ten, danh gia, gia ca-->
-      <div class="option-product">
-        <span>Select Type</span>
-        <span>Color</span>
-        <label class="custom-radio" for="red">
-          <input id="red" type="radio" value="red" name="options1" checked />
-          <span class="checkbox-label">Red</span>
-        </label>
-        <label class="custom-radio" for="yellow">
-          <input id="yellow" type="radio" value="yellow" name="options1" />
-          <span class="checkbox-label">Yellow</span>
-        </label>
-        <label class="custom-radio" for="black">
-          <input id="black" type="radio" value="black" name="options1" />
-          <span class="checkbox-label">Black</span>
-        </label>
-
-        <span>Gb</span>
-        <label class="custom-radio" for="512Gb">
-          <input id="512Gb" type="radio" value="512Gb" name="options" checked />
-          <span class="checkbox-label">512 Gb</span>
-        </label>
-        <label class="custom-radio" for="1Tb">
-          <input id="1Tb" type="radio" value="1Tb" name="options" />
-          <span class="checkbox-label">1 Tb</span>
-        </label>
-        <label class="custom-radio" for="2Tb">
-          <input id="2Tb" type="radio" value="2Tb" name="options" />
-          <span class="checkbox-label">2 Tb</span>
-        </label>
+      <div class="product-option">
+        <h3>Select Type</h3>
+        <div class="group-option">
+          <h3>Color</h3>
+          <label class="custom-radio" for="red">
+            <input id="red" type="radio" value="red" name="options1" checked />
+            <span class="checkbox-label">Red</span>
+          </label>
+          <label class="custom-radio" for="yellow">
+            <input id="yellow" type="radio" value="yellow" name="options1" />
+            <span class="checkbox-label">Yellow</span>
+          </label>
+          <label class="custom-radio" for="black">
+            <input id="black" type="radio" value="black" name="options1" />
+            <span class="checkbox-label">Black</span>
+          </label>
+        </div>
+        <div class="group-option">
+          <h3>Gb</h3>
+          <label class="custom-radio" for="512Gb">
+            <input
+              id="512Gb"
+              type="radio"
+              value="512Gb"
+              name="options"
+              checked
+            />
+            <span class="checkbox-label">512 Gb</span>
+          </label>
+          <label class="custom-radio" for="1Tb">
+            <input id="1Tb" type="radio" value="1Tb" name="options" />
+            <span class="checkbox-label">1 Tb</span>
+          </label>
+          <label class="custom-radio" for="2Tb">
+            <input id="2Tb" type="radio" value="2Tb" name="options" />
+            <span class="checkbox-label">2 Tb</span>
+          </label>
+        </div>
       </div>
       <!-- chon option mau sac, dung luong -->
-      <div class="footer-form">
+      <div class="product-submit">
         <button type="submit" class="btn-buy">BUY NOW</button>
       </div>
       <!-- nut mua -->
     </form>
-    <div>
-      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi
-      nobis nisi, et, totam assumenda fugiat ullam necessitatibus cum vitae
-      soluta doloremque officia in dolore harum? Tempore voluptates ducimus
-      inventore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-      nesciunt animi, deleniti eaque magnam minus ea optio, perspiciatis, culpa
-      at quasi repellendus aliquam vel error est facilis eveniet fugit
-      inventore. p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-      sequi nobis nisi, et, totam assumenda fugiat ullam necessitatibus cum
-      vitae soluta doloremque officia in dolore harum? Tempore voluptates
-      ducimus inventore? Lorem ipsum dolor sit amet, consectetur adipisicing
-      elit. Nisi nesciunt animi, deleniti eaque magnam minus ea optio,
-      perspiciatis, culpa at quasi repellendus aliquam vel error est facilis
-      eveniet fugit inventore. p Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Esse sequi nobis nisi, et, totam assumenda fugiat ullam
-      necessitatibus cum vitae soluta doloremque officia in dolore harum?
-      Tempore voluptates ducimus inventore? Lorem ipsum dolor sit amet,
-      consectetur adipisicing elit. Nisi nesciunt animi, deleniti eaque magnam
-      minus ea optio, perspiciatis, culpa at quasi repellendus aliquam vel error
-      est facilis eveniet fugit inventore.
+    <div class="product-info-descriptions">
+      <span><h3>Descriptions</h3></span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi
+        nobis nisi, et, totam assumenda fugiat ullam necessitatibus cum vitae
+        soluta doloremque officia in dolore harum? Tempore voluptates ducimus
+        inventore? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Nisi nesciunt animi, deleniti eaque magnam minus ea optio, perspiciatis,
+        culpa at quasi repellendus aliquam vel error est facilis eveniet fugit
+        inventore. p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Esse sequi nobis nisi, et, totam assumenda fugiat ullam necessitatibus
+        cum vitae soluta doloremque officia in dolore harum? Tempore voluptates
+        ducimus inventore? Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Nisi nesciunt animi, deleniti eaque magnam minus ea optio,
+        perspiciatis, culpa at quasi repellendus aliquam vel error est facilis
+        eveniet fugit inventore. p Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Esse sequi nobis nisi, et, totam assumenda fugiat
+        ullam necessitatibus cum vitae soluta doloremque officia in dolore
+        harum? Tempore voluptates ducimus inventore? Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Nisi nesciunt animi, deleniti eaque magnam
+        minus ea optio, perspiciatis, culpa at quasi repellendus aliquam vel
+        error est facilis eveniet fugit inventore.
+      </p>
     </div>
     <!-- mo ta san pham -->
   </body>
