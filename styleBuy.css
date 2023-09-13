@@ -13,10 +13,12 @@ div {
 
 @media only screen and (max-width: 767px) {
   nav {
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    top: 0;
   }
   .btn-buy {
     position: fixed;
