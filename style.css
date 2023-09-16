@@ -118,10 +118,10 @@ body {
 
 .container {
   background-color: rgb(89, 0, 255);
-  width: 100%;
   text-align: center;
-  overflow-x: auto;
+  overflow-x: hidden;
   white-space: nowrap;
+  width: 100%;
 }
 
 .item {

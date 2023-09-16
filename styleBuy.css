@@ -3,9 +3,9 @@ body {
   height: 100%;
 }
 
-/* div {
-  margin: 10px 0px;
-} */
+* {
+  margin: 5px 0px;
+}
 
 .grid {
   width: 100%;
@@ -41,6 +41,7 @@ body {
     left: 0;
     right: 0;
     width: 100%;
+    margin-bottom: 0;
   }
 
   .btn-buy {
@@ -89,6 +90,11 @@ body {
     border: 3px solid #65c18c;
   }
 
+  .group-option,
+  .product-info {
+    height: 65px !important;
+  }
+
   .product-info {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -97,8 +103,6 @@ body {
   .product-info i {
     display: flex;
     justify-content: end;
-    text-align: center;
-    height: 20px;
   }
 
   .product-info-descriptions * {
@@ -109,8 +113,13 @@ body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
 
+  .product-info-descriptions p {
+    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
   .product-option h3 {
-    margin: 0;
     display: flex;
     flex-direction: column;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -137,21 +146,21 @@ body {
     cursor: pointer;
   }
 
-  .checkbox-label {
+  .custom-radio .checkradio-label {
+    display: flex;
     position: relative;
     width: 60px;
     height: 30px;
     background-color: #ccc;
+    justify-content: center;
+    align-items: center;
     border: none;
-    text-align: center;
-    line-height: 30px;
     font-size: 16px;
-    color: #000;
     border-radius: 30px;
-    margin: 0px 5px;
+    margin-right: 5px;
   }
 
-  .custom-radio input:checked + .checkbox-label {
+  .custom-radio input:checked + .checkradio-label {
     background-color: #65c18c;
     color: rgba(255, 255, 255, 1);
   }

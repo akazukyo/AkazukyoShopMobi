@@ -42,4 +42,11 @@ function createRipple(e) {
   button.appendChild(ripple);
 }
 
-showImg.addEventListener("click", createRipple);
+// showImg.addEventListener("click", createRipple);
+
+// var hello = document.querySelector(".hello");
+
+// var computedStyle = window.getComputedStyle(hello);
+// var displayValue = computedStyle.getPropertyValue("display");
+
+// console.log(displayValue);

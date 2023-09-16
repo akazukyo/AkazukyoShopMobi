@@ -71,3 +71,34 @@ function find() {
     inputElement.style.animationDuration = "310ms";
   });
 }
+
+var container = document.querySelector(".container");
+
+var isDragging = false;
+var startX = 0;
+var scrollLeft = 0;
+
+container.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+  console.log(scrollLeft);
+});
+
+container.addEventListener("mouseleave", () => {
+  isDragging = false;
+});
+
+container.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+container.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  console.log("scroll: " + scrollLeft);
+  //console.log(e.pageX); chay xuat phat tu 0 den cuoi trang theo vi tri cua tro chuot
+  const x = e.pageX - container.offsetLeft;
+  const walk = (x - startX) * 2; // Điều chỉnh hệ số 3 để thay đổi tốc độ cuộn
+  container.scrollLeft = scrollLeft - walk;
+});
