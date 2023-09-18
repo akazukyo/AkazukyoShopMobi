@@ -13,6 +13,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   nav {
+    margin-top: 0;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -148,12 +149,13 @@ body {
 
   .product-img-option {
     width: calc(100% - 1px);
-    overflow-x: hidden;
+    overflow-x: auto;
     white-space: nowrap;
     align-items: center;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     border: 1px solid;
+    margin-top: 10px;
   }
 
   .product-img-option img {
