@@ -90,6 +90,26 @@ var infinityScrollRight = false;
 var scroll = false;
 var startX = 0;
 var scrollLeft = 0;
+var targetImg;
+var currentTargetImg;
+var previousTargetImg;
+
+optionImg.addEventListener("click", function (e) {
+  if (e.target !== optionImg) {
+    currentTargetImg = e.target;
+    if (currentTargetImg != targetImg) {
+      if (previousTargetImg) {
+        previousTargetImg.classList.remove("active");
+      }
+      targetImg = currentTargetImg;
+      productImgMain.children.item(0).src = e.target.getAttribute("src");
+      targetImg.classList.add("active");
+      previousTargetImg = targetImg;
+    } else {
+      console.log("alo");
+    }
+  }
+});
 
 optionImg.addEventListener("touchdown", function (e) {
   scroll = true;

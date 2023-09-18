@@ -155,8 +155,7 @@ body {
     align-items: center;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    border: 1px solid;
-    margin-top: 10px;
+    padding: 10px 0px;
   }
 
   .product-img-option img {
@@ -166,12 +165,15 @@ body {
     display: inline-block;
     position: relative;
     border-radius: 10px;
-    border: 1% solid;
+    border: 1px solid;
     margin: 0px 2px;
   }
   .slide-left-button,
   .slide-right-button {
     display: none;
+  }
+  .product-img-option img.active {
+    border: 3px solid #65c18c;
   }
 }
 
@@ -203,7 +205,3 @@ body {
   border: 1px solid;
   margin: 0px 2px;
 } */
-
-.product-img-option img.active {
-  border: 3px solid #65c18c;
-}
