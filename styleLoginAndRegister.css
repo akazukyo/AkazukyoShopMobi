@@ -1,8 +1,16 @@
 body {
-  margin: 0 5% 0;
+  margin: 0 5% 20%;
+  height: 100%;
   text-align: center;
 }
 
+* {
+  margin: 5px 0px;
+}
+
+.grid {
+  width: 100%;
+}
 @media only screen and (max-width: 767px) {
   nav {
     position: fixed;
@@ -49,6 +57,7 @@ body {
     border-radius: 30px;
     background-color: #c0c0c0;
     color: #141414;
+    padding-left: 30px;
   }
 
   .accept-rule {
