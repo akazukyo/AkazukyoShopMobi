@@ -6,85 +6,85 @@ var buttonRight = document.querySelector(".slide-right-button");
 var infinityScrollLeft = false;
 var infinityScrollRight = false;
 
-var i = 0;
+// var i = 0;
 
-// var computedStyle = window.getComputedStyle(
-//   document.querySelector(".product-img-option")
-// );
-// var displayValue = computedStyle.getPropertyValue("width");
+// // var computedStyle = window.getComputedStyle(
+// //   document.querySelector(".product-img-option")
+// // );
+// // var displayValue = computedStyle.getPropertyValue("width");
 
-buttonLeft.addEventListener("click", slideToLeft);
-buttonRight.addEventListener("click", slideToRight);
+// buttonLeft.addEventListener("click", slideToLeft);
+// buttonRight.addEventListener("click", slideToRight);
 
-function slideToLeft() {
-  // if (infinityScrollRight) {
-  //   i = optionImg.children.length - 1;
-  //   infinityScrollRight = false;
-  // }
-  // i--;
-  // if (i < 0) {
-  //   infinityScrollLeft = true;
-  //   if (infinityScrollLeft) {
-  //     optionImg.prepend(optionImg.children.item(optionImg.children.length - 1));
-  //     optionImg.children.item(1).classList.remove("active");
-  //     optionImg.children
-  //       .item(optionImg.children.item(2))
-  //       .classList.add("active");
-  //     productImgMain.children.item(0).src = optionImg.children
-  //       .item(0)
-  //       .getAttribute("src");
-  //     optionImg.scrollLeft -= 100;
-  //   }
-  // } else {
-  //   optionImg.children.item(i + 1).classList.remove("active");
-  //   optionImg.children.item(i).classList.add("active");
-  //   productImgMain.children.item(0).src = optionImg.children
-  //     .item(i)
-  //     .getAttribute("src");
-  //   optionImg.scrollLeft -= 100;
-  // }
-  optionImg.append(optionImg.children.item(0));
-  optionImg.append(optionImg.children.item(1));
-  optionImg.children.item(2).classList.add("active");
-  optionImg.children
-    .item(optionImg.childElementCount - 1)
-    .classList.remove("active");
-  optionImg.scrollLeft -= 200;
-}
+// function slideToLeft() {
+//   // if (infinityScrollRight) {
+//   //   i = optionImg.children.length - 1;
+//   //   infinityScrollRight = false;
+//   // }
+//   // i--;
+//   // if (i < 0) {
+//   //   infinityScrollLeft = true;
+//   //   if (infinityScrollLeft) {
+//   //     optionImg.prepend(optionImg.children.item(optionImg.children.length - 1));
+//   //     optionImg.children.item(1).classList.remove("active");
+//   //     optionImg.children
+//   //       .item(optionImg.children.item(2))
+//   //       .classList.add("active");
+//   //     productImgMain.children.item(0).src = optionImg.children
+//   //       .item(0)
+//   //       .getAttribute("src");
+//   //     optionImg.scrollLeft -= 100;
+//   //   }
+//   // } else {
+//   //   optionImg.children.item(i + 1).classList.remove("active");
+//   //   optionImg.children.item(i).classList.add("active");
+//   //   productImgMain.children.item(0).src = optionImg.children
+//   //     .item(i)
+//   //     .getAttribute("src");
+//   //   optionImg.scrollLeft -= 100;
+//   // }
+//   optionImg.append(optionImg.children.item(0));
+//   optionImg.append(optionImg.children.item(1));
+//   optionImg.children.item(2).classList.add("active");
+//   optionImg.children
+//     .item(optionImg.childElementCount - 1)
+//     .classList.remove("active");
+//   optionImg.scrollLeft -= 200;
+// }
 
-function slideToRight() {
-  // if (infinityScrollLeft) {
-  //   i = 0;
-  //   infinityScrollLeft = false;
-  // }
-  // i++;
-  // if (i >= optionImg.children.length) {
-  //   infinityScrollRight = true;
-  //   {
-  //     optionImg.appendChild(optionImg.children.item(0));
-  //     optionImg.children
-  //       .item(optionImg.children.length - 2)
-  //       .classList.remove("active");
-  //     optionImg.children
-  //       .item(optionImg.children.length - 1)
-  //       .classList.add("active");
-  //     productImgMain.children.item(0).src = optionImg.children
-  //       .item(optionImg.children.length - 1)
-  //       .getAttribute("src");
-  //     optionImg.scrollLeft += 100;
-  //   }
-  // } else {
-  //   optionImg.children.item(i - 1).classList.remove("active");
-  //   optionImg.children.item(i).classList.add("active");
-  //   productImgMain.children.item(0).src = optionImg.children
-  //     .item(i)
-  //     .getAttribute("src");
-  //   optionImg.scrollLeft += 100;
-  // }
-  optionImg.prepend(optionImg.children.item(optionImg.childElementCount - 1));
+// function slideToRight() {
+//   // if (infinityScrollLeft) {
+//   //   i = 0;
+//   //   infinityScrollLeft = false;
+//   // }
+//   // i++;
+//   // if (i >= optionImg.children.length) {
+//   //   infinityScrollRight = true;
+//   //   {
+//   //     optionImg.appendChild(optionImg.children.item(0));
+//   //     optionImg.children
+//   //       .item(optionImg.children.length - 2)
+//   //       .classList.remove("active");
+//   //     optionImg.children
+//   //       .item(optionImg.children.length - 1)
+//   //       .classList.add("active");
+//   //     productImgMain.children.item(0).src = optionImg.children
+//   //       .item(optionImg.children.length - 1)
+//   //       .getAttribute("src");
+//   //     optionImg.scrollLeft += 100;
+//   //   }
+//   // } else {
+//   //   optionImg.children.item(i - 1).classList.remove("active");
+//   //   optionImg.children.item(i).classList.add("active");
+//   //   productImgMain.children.item(0).src = optionImg.children
+//   //     .item(i)
+//   //     .getAttribute("src");
+//   //   optionImg.scrollLeft += 100;
+//   // }
+//   optionImg.prepend(optionImg.children.item(optionImg.childElementCount - 1));
 
-  optionImg.scrollLeft += 100;
-}
+//   optionImg.scrollLeft += 100;
+// }
 //===========================================================================//
 
 var scroll = false;
