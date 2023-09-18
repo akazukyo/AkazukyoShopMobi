@@ -119,14 +119,16 @@ body {
 .container {
   background-color: rgb(89, 0, 255);
   text-align: center;
-  overflow-x: hidden;
+  overflow-x: auto;
   white-space: nowrap;
+  scroll-snap-type: x mandatory;
   width: 100%;
 }
 
 .item {
   display: inline-block;
   position: relative;
+  scroll-snap-align: center;
   height: 250px;
   width: 190px;
   background-color: gray;
