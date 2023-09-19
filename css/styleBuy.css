@@ -25,6 +25,10 @@ body {
     background-color: white;
   }
 
+  .btn-back {
+    color: black;
+  }
+
   #product {
     margin-top: 55px;
     z-index: 99;
