@@ -1,6 +1,10 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0 5% 20%;
-  height: 100%;
+  height: inherit;
   text-align: center;
   /* background-image: linear-gradient(
     to right,
@@ -20,6 +24,7 @@ body {
 }
 @media only screen and (max-width: 767px) {
   nav {
+    height: 10%;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -35,6 +40,11 @@ body {
     height: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    height: 10%;
   }
 
   .icon-user {
