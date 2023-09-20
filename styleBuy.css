@@ -225,7 +225,7 @@ body {
   scroll-behavior: smooth;
 }
 
-#comment {
+.comment {
   width: 94%;
   border-radius: 30px;
   background-color: #f5f5f5;
