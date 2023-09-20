@@ -1,5 +1,8 @@
 html {
   height: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  line-height: 1.7;
 }
 
 body {
@@ -17,6 +20,11 @@ body {
 
 * {
   margin: 5px 0px;
+}
+
+a {
+  color: #ff8c00;
+  text-decoration: none;
 }
 
 .grid {
@@ -82,10 +90,27 @@ body {
   form input {
     height: 50px;
     margin: 5px 0px;
-    border-radius: 30px;
-    background-color: #c0c0c0;
+    border-radius: 20px;
     color: #141414;
+  }
+
+  form input:focus,
+  form input:active {
+    border: 10px solid #ff8c00; /* Điều chỉnh giá trị border ở đây */
+  }
+
+  form input:not(:last-child) {
     padding-left: 30px;
+    border: 1px solid #c0c0c0;
+  }
+
+  form input:last-child {
+    background-color: #625ff8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
   }
 
   .accept-rule {
@@ -93,6 +118,7 @@ body {
     position: relative;
     flex-direction: row;
     margin: 5px;
+    align-items: center;
   }
 
   .rule {
@@ -105,20 +131,16 @@ body {
     --bg-color: gray;
     appearance: none;
     inset: 0;
-    width: 30px;
-    max-width: 10%;
     height: 30px;
-    border-radius: 5px;
+    aspect-ratio: 1;
+    max-width: 10%;
+    border-radius: 10px;
     background-color: var(--bg-color);
     cursor: pointer;
   }
 
   .custom-checkbox:checked {
-    --bg-color: blue;
-  }
-
-  p.test {
-    height: 10%;
+    --bg-color: #625ff8;
   }
 }
 
