@@ -29,7 +29,10 @@
     <div class="content">
       <form action="">
         <input type="text" name="name" id="name" placeholder="Username" autocomplete="off" />
-        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
+        <div class="field-pass">
+          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
+          <i class="show-pass fa-regular fa-eye"></i>
+        </div>
         <div class="accept-rule">
           <input type="checkbox" name="" id="rule" class="custom-checkbox" />
             <label class="rule" for="rule">
@@ -39,5 +42,6 @@
       </form>
     </div>
     <footer><a class="test" href="Login.html"></a>Forgotten password?</a></footer>
+    <script src="Javascript/login.js"></script>
   </body>
 </html>
