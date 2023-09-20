@@ -1,3 +1,10 @@
+html {
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  line-height: 1;
+}
+
 body {
   margin: 0 5% 20%;
   height: 100%;
@@ -53,7 +60,7 @@ body {
   .btn-buy {
     position: relative;
     font-size: large;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
     color: rgba(255, 255, 255, 0.7);
     background-color: #65c18c;
     height: 50px;
@@ -79,6 +86,7 @@ body {
 
   .group-option,
   .product-info {
+    line-height: 0.5;
     height: 65px !important;
   }
 
@@ -97,11 +105,11 @@ body {
   }
 
   .product-info-descriptions h3 {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   }
 
   .product-info-descriptions p {
-    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif; */
     text-align: justify;
     line-height: 1.5;
   }
@@ -109,14 +117,14 @@ body {
   .product-option h3 {
     display: flex;
     flex-direction: column;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   }
 
   .product-option input {
     display: flex;
     flex-direction: row;
     display: inline-block;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
     border: none;
     border-radius: 50px;
   }
