@@ -36,10 +36,10 @@ body {
   }
 
   .content {
-    height: 90%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 
   footer {
