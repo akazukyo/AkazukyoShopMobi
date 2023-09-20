@@ -232,6 +232,9 @@ body {
   p.rep-comment {
     line-height: 1.5;
     text-align: justify;
+  }
+
+  .test5 {
     white-space: wrap;
   }
 }
