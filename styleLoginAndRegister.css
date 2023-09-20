@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  margin: 0 5% 20%;
+  margin: 0px 5% 20%;
   text-align: center;
   height: auto;
   /* background-image: linear-gradient(
@@ -16,10 +16,6 @@ body {
     #c0c0c0 90%,
     rgba(20, 20, 20, 0.7)
   ); */
-}
-
-* {
-  margin: 5px 0px;
 }
 
 a {
