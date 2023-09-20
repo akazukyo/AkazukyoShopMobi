@@ -203,7 +203,6 @@ body {
     scroll-snap-align: center;
     display: inline-block;
     position: relative;
-    white-space: wrap;
     z-index: -99;
   }
 
@@ -233,6 +232,7 @@ body {
   p.rep-comment {
     line-height: 1.5;
     text-align: justify;
+    white-space: wrap;
   }
 }
 
