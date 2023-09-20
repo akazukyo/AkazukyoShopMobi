@@ -24,7 +24,6 @@ body {
 }
 @media only screen and (max-width: 767px) {
   nav {
-    height: 10%;
     position: fixed;
     display: flex;
     flex-direction: row;
