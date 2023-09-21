@@ -235,7 +235,9 @@ body {
   }
 
   .safari-fix {
-    white-space: pre;
+    display: block;
+    position: relative;
+    white-space: wrap;
     word-wrap: normal;
   }
 }
