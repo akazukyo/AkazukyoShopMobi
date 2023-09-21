@@ -191,8 +191,10 @@ body {
   .list-comment {
     display: flex;
     overflow-x: auto;
+    white-space: nowrap;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    width: 100%;
   }
 
   .comment {
@@ -200,10 +202,18 @@ body {
     border-radius: 30px;
     background-color: #f5f5f5;
     padding: 10px;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     display: inline-block;
-    position: relative;
-    z-index: -99;
+    min-width: 300px;
+  }
+
+  p.comment-product,
+  p.rep-comment {
+    white-space: normal; /* Cho phép văn bản bên trong đoạn xuống dòng khi cần */
+    overflow: auto; /* Cho phép cuộn nếu nội dung quá dài */
+    max-height: 200px; /* Đặt chiều cao tối đa của đoạn văn bản */
+    line-height: 1.5;
+    text-align: justify;
   }
 
   .comment-user-info {
@@ -226,14 +236,6 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-  }
-
-  p.comment-product,
-  p.rep-comment {
-    line-height: 1.5;
-    text-align: justify;
-    overflow-x: auto;
-    white-space: wrap;
   }
 }
 
