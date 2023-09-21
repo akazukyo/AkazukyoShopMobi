@@ -204,7 +204,6 @@ body {
     display: inline-block;
     position: relative;
     z-index: -99;
-    white-space: wrap;
   }
 
   .comment-user-info {
