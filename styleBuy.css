@@ -231,8 +231,9 @@ body {
   p.comment-product,
   p.rep-comment {
     line-height: 1.5;
-    overflow: hidden;
     white-space: wrap;
+    height: auto;
+    text-align: justify;
   }
 }
 
