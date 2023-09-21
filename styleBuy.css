@@ -202,9 +202,21 @@ body {
     border-radius: 30px;
     background-color: #f5f5f5;
     padding: 10px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     display: inline-block;
     min-width: 300px;
+  }
+
+  .comment:first-child {
+    margin-right: 5px;
+  }
+
+  .comment:last-child {
+    margin-left: 5px;
+  }
+
+  .comment:not(:first-child, :last-child) {
+    margin: 0px 5px;
   }
 
   p.comment-product,
