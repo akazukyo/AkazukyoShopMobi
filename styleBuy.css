@@ -189,8 +189,8 @@ body {
   }
 
   .list-comment {
+    display: flex;
     overflow-x: auto;
-    white-space: nowrap;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
