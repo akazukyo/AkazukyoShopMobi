@@ -193,9 +193,6 @@ body {
     white-space: nowrap;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-  }
-
-  .list-comment {
     height: fit-content;
   }
 
@@ -208,7 +205,6 @@ body {
     display: inline-block;
     position: relative;
     z-index: -99;
-    height: 50px;
   }
 
   .comment-user-info {
@@ -236,7 +232,7 @@ body {
   p.comment-product,
   p.rep-comment {
     line-height: 1.5;
-    white-space: wrap;
+    white-space: normal;
     height: auto;
     text-align: justify;
   }
