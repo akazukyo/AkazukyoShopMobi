@@ -208,7 +208,7 @@ body {
     display: inline-block;
     position: relative;
     z-index: -99;
-    height: auto;
+    height: 50px;
   }
 
   .comment-user-info {
