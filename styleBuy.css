@@ -228,8 +228,8 @@ body {
     border-radius: 50%;
   }
 
-  p.comment-product,
-  p.rep-comment {
+  div.comment-product,
+  div.rep-comment {
     line-height: 1.5;
     text-align: justify;
   }
