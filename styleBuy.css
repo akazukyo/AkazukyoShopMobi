@@ -228,18 +228,11 @@ body {
     border-radius: 50%;
   }
 
-  div.comment-product,
-  div.rep-comment {
+  p.comment-product,
+  p.rep-comment {
     line-height: 1.5;
-    text-align: justify;
-  }
-
-  .safari-fix {
-    display: block;
-    overflow-x: none;
-    position: relative;
-    white-space: wrap;
-    word-wrap: normal;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 
