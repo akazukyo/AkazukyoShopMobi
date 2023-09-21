@@ -235,8 +235,8 @@ body {
   }
 
   .safari-fix {
-    white-space: wrap;
-    word-wrap: wrap;
+    white-space: pre;
+    word-wrap: normal;
   }
 }
 
