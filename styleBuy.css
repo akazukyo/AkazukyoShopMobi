@@ -191,7 +191,6 @@ body {
   .list-comment {
     overflow-x: auto;
     white-space: nowrap;
-    word-wrap: normal;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
@@ -235,10 +234,10 @@ body {
     text-align: justify;
   }
 
-  /* .safari-fix {
-    white-space: pre;
-    word-wrap: normal;
-  } */
+  .safari-fix {
+    white-space: wrap;
+    word-wrap: wrap;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
