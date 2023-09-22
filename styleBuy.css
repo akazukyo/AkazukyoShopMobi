@@ -10,7 +10,7 @@ body {
   height: 100%;
 }
 
-* {
+*:not(p) {
   margin: 5px 0px;
 }
 
