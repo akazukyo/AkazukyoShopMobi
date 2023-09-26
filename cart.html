@@ -15,57 +15,62 @@
   </head>
   <body>
     <nav>
-      <span
-        ><a class="btn-back" href="index.html"
-          ><i class="fa-solid fa-arrow-right fa-rotate-180 fa-2x"></i></a
-      ></span>
-      <h3>Product Details</h3>
-      <span><i class="fa-solid fa-bars fa-2x"></i></span
-      ><!-- lua chon khác-->
+      <div>
+        <span
+          ><a class="btn-back" href="index.html">
+            <i class="fa-solid fa-arrow-right fa-rotate-180 fa-2x"></i
+          ></a>
+        </span>
+        <h3>Card</h3>
+        <span><i class="fa-solid fa-bars fa-2x"></i> </span>
+      </div>
     </nav>
-    <form action="#" method="post">
-      <div class="product-item">
-        <input type="checkbox" name="item" id="checkItem" />
-        <label class="item" for="item">
-          <img
-            class="product-icon"
-            src="https://picsum.photos/id/684/80/80"
-            alt=""
-          />
-          <span>
-            <p>name</p>
-            <p>gia</p>
-          </span>
-        </label>
-        <div class="product-edit-quantity">
-          <input type="button" value="-" id="btnSub" />
-          <div><p class="num">1</p></div>
-          <input type="button" value="+" id="btnAdd" />
+    <div class="content">
+      <form action="#" method="post">
+        <div class="product-item">
+          <input type="checkbox" name="item" id="checkItem" />
+          <label class="item" for="item">
+            <img
+              class="product-icon"
+              src="https://picsum.photos/id/684/80/80"
+              alt=""
+            />
+            <span>
+              <p>name</p>
+              <p>gia</p>
+            </span>
+          </label>
+          <div class="product-edit-quantity">
+            <input type="button" value="-" id="btnSub" />
+            <div><p class="num">1</p></div>
+            <input type="button" value="+" id="btnAdd" />
+          </div>
         </div>
-      </div>
-      <div class="product-item">
-        <input type="checkbox" name="item" id="checkItem" />
-        <label class="item" for="item">
-          <img
-            class="product-icon"
-            src="https://picsum.photos/id/684/80/80"
-            alt=""
-          />
-          <span>
-            <p>name</p>
-            <p>gia</p>
-          </span>
-        </label>
-        <div class="product-edit-quantity">
-          <input type="button" value="-" id="btnSub" />
-          <div><p class="num">1</p></div>
-          <input type="button" value="+" id="btnAdd" />
+        <div class="product-item">
+          <input type="checkbox" name="item" id="checkItem" />
+          <label class="item" for="item">
+            <img
+              class="product-icon"
+              src="https://picsum.photos/id/684/80/80"
+              alt=""
+            />
+            <span>
+              <p>name</p>
+              <p>gia</p>
+            </span>
+          </label>
+          <div class="product-edit-quantity">
+            <input type="button" value="-" id="btnSub" />
+            <div><p class="num">1</p></div>
+            <input type="button" value="+" id="btnAdd" />
+          </div>
         </div>
-      </div>
-      <div class="product-submit">
-        <button type="submit" class="btn-buy">Checkout</button>
-      </div>
-    </form>
+        <div class="product-submit">
+          <button type="submit" class="btn-buy">Checkout</button>
+        </div>
+      </form>
+    </div>
+
     <script src="test.js"></script>
   </body>
 </html>
