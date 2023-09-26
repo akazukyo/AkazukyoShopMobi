@@ -1,0 +1,135 @@
+html {
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+  line-height: 1;
+}
+
+body {
+  margin: 0 5% 20%;
+  height: 100%;
+}
+
+* {
+  margin: 5px 0px;
+}
+
+.grid {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  nav {
+    margin: 0px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 90%;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+  }
+
+  .btn-back {
+    color: black;
+  }
+
+  .product-submit {
+    position: fixed;
+    height: 10%;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .product-item {
+    background-color: red;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(157, 0, 255);
+    margin-top: 20%;
+  }
+
+  label.item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product-edit-quantity {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-edit-quantity input {
+    /* appearance: none; */
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .product-edit-quantity div {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .product-edit-quantity p {
+    margin: auto;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input#checkItem {
+    appearance: none;
+    height: 30px;
+    aspect-ratio: 1;
+    background-color: blue;
+    border-radius: 5px;
+  }
+
+  input#checkItem:checked {
+    background-color: #65c18c;
+  }
+
+  input#btnAdd {
+    background-color: #65c18c;
+  }
+
+  .btn-buy {
+    position: relative;
+    font-size: large;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #65c18c;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+}

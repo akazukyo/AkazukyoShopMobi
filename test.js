@@ -50,3 +50,26 @@
 // var displayValue = computedStyle.getPropertyValue("display");
 
 // console.log(displayValue);
+
+btnSub = document.getElementById("btnSub");
+btnAdd = document.getElementById("btnAdd");
+num = document.querySelector(".num");
+
+var count = 1;
+
+btnAdd.addEventListener("click", function (e) {
+  count++;
+  num.innerHTML = count;
+  if (num.innerHTML > 1) {
+    btnSub.style.backgroundColor = "#65c18c";
+  }
+});
+
+btnSub.addEventListener("click", function (e) {
+  if (count == 1) return;
+  count--;
+  num.innerHTML = count;
+  if (num.innerHTML == 1) {
+    btnSub.style.backgroundColor = "";
+  }
+});

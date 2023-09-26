@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styleCart.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <nav>
+      <span
+        ><a class="btn-back" href="index.html"
+          ><i class="fa-solid fa-arrow-right fa-rotate-180 fa-2x"></i></a
+      ></span>
+      <h3>Product Details</h3>
+      <span><i class="fa-solid fa-bars fa-2x"></i></span
+      ><!-- lua chon khác-->
+    </nav>
+    <form action="#" method="post">
+      <div class="product-item">
+        <input type="checkbox" name="item" id="checkItem" />
+        <label class="item" for="item">
+          <img
+            class="product-icon"
+            src="https://picsum.photos/id/684/80/80"
+            alt=""
+          />
+          <span>
+            <p>name</p>
+            <p>gia</p>
+          </span>
+        </label>
+        <div class="product-edit-quantity">
+          <input type="button" value="-" id="btnSub" />
+          <div><p class="num">1</p></div>
+          <input type="button" value="+" id="btnAdd" />
+        </div>
+      </div>
+      <div class="product-item">
+        <input type="checkbox" name="item" id="checkItem" />
+        <label class="item" for="item">
+          <img
+            class="product-icon"
+            src="https://picsum.photos/id/684/80/80"
+            alt=""
+          />
+          <span>
+            <p>name</p>
+            <p>gia</p>
+          </span>
+        </label>
+        <div class="product-edit-quantity">
+          <input type="button" value="-" id="btnSub" />
+          <div><p class="num">1</p></div>
+          <input type="button" value="+" id="btnAdd" />
+        </div>
+      </div>
+      <div class="product-submit">
+        <button type="submit" class="btn-buy">Checkout</button>
+      </div>
+    </form>
+    <script src="test.js"></script>
+  </body>
+</html>
