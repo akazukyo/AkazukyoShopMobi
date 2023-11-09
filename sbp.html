@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="a">"Nhap so a:"</label>
+    <input type="number" id="a" />
+    <label for="a">"Nhap so b:"</label>
+    <input type="number" id="b" />
+    <label for="a">"Nhap so c:"</label>
+    <input type="number" id="c" />
+    <button onclick="MaxABC()">Bình phương</button>
+    <script>
+      function MaxABC() {
+        const a = parseInt(document.getElementById("a").value);
+        const b = parseInt(document.getElementById("b").value);
+        const c = parseInt(document.getElementById("c").value);
+        if (a != b && a != c && b != c) {
+          if (a > b) {
+            if (a > c) {
+              document.write("max a");
+            } else {
+              document.write("max c");
+            }
+          } else {
+            if (c > b) {
+              document.write("max c");
+            } else {
+              document.write("max b");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

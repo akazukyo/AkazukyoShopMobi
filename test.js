@@ -51,25 +51,56 @@
 
 // console.log(displayValue);
 
-btnSub = document.getElementById("btnSub");
-btnAdd = document.getElementById("btnAdd");
-num = document.querySelector(".num");
+// const btnAddList = document.querySelectorAll(".btnAdd");
+// const btnSubList = document.querySelectorAll(".btnSub");
+// const numList = document.querySelectorAll(".num");
+// const checkboxList = document.querySelectorAll(".checkItem");
 
-var count = 1;
+// checkboxList.forEach((checkbox, index) => {
+//   checkbox.addEventListener("change", function () {
+//     // Kiểm tra trạng thái check của checkbox
+//     if (checkbox.checked) {
+//       // Thực hiện các thao tác cập nhật khi checkbox được chọn
+//     } else {
+//       btnAddList.forEach((btnAdd, index) => {
+//         btnAdd.addEventListener("click", function () {});
+//       });
+//       btnSubList.forEach((btnSub, index) => {
+//         btnSub.addEventListener("click", function () {});
+//       });
+//     }
+//   });
+// });
 
-btnAdd.addEventListener("click", function (e) {
-  count++;
-  num.innerHTML = count;
-  if (num.innerHTML > 1) {
-    btnSub.style.backgroundColor = "#65c18c";
+const btnAddList = document.querySelectorAll(".btnAdd");
+const btnSubList = document.querySelectorAll(".btnSub");
+const numList = document.querySelectorAll(".num");
+const checkboxList = document.querySelectorAll(".checkItem");
+
+function updateNumber(index, increment) {
+  const numElement = numList[index];
+  let currentNum = parseInt(numElement.textContent, 10);
+
+  if (increment) {
+    currentNum++;
+  } else if (currentNum > 1) {
+    currentNum--;
   }
+
+  numElement.textContent = currentNum;
+
+  const btnSub = btnSubList[index];
+  btnSub.style.backgroundColor = currentNum > 1 ? "#65c18c" : "#ffffff";
+}
+
+btnAddList.forEach((btnAdd, index) => {
+  btnAdd.addEventListener("click", () => {
+    updateNumber(index, true);
+  });
 });
 
-btnSub.addEventListener("click", function (e) {
-  if (count == 1) return;
-  count--;
-  num.innerHTML = count;
-  if (num.innerHTML == 1) {
-    btnSub.style.backgroundColor = "";
-  }
+btnSubList.forEach((btnSub, index) => {
+  btnSub.addEventListener("click", () => {
+    updateNumber(index, false);
+  });
 });

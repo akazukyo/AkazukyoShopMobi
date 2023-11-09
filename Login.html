@@ -10,40 +10,41 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styleLoginAndRegister.css" />
     <title>Login</title>
   </head>
-  <body>
-    <nav style="visibility: hidden;">
-      <i class="fa-solid fa-arrow-right fa-rotate-180 fa-2x">
-        <a href="Login.html"></a>
-      </i>
-      <i class="fa-regular fa-circle-question fa-2x"></i>
-    </nav>
-    <span class="icon-user"
-      ><i class="child fa-regular fa-user fa-3x"></i
-    ></span>
-    <h2>SignIn</h2>
-      <p>Dang nhap vao he thong</p>
-    <div class="content">
-      <form action="">
-        <input type="text" name="name" id="name" placeholder="Username" autocomplete="off" />
-        <div class="field-pass">
-          <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
-          <span class="show-pass">
-            <i class="fa-regular fa-eye-slash"></i>
-            <i class="hide fa-regular fa-eye"></i>
+  <body class="text-center lh-lg">
+    <div class="container p-0">
+      <div class="d-flex row flex-column justify-content-center align-items-center w-100 m-0">
+        <div class="col-lg-8 col-md-10 col-sm-10 col-12">
+          <span class="d-flex w-auto icon-user rounded-circle border-secondary border border-1 mt-5 mx-auto">
+            <i class="child m-auto rounded-circle p-4 w-auto fa-regular fa-user fa-3x"></i>
           </span>
+          <h2 class="mb-5">Sign In</h2>
+
+          <form class="d-flex flex-column" action="">
+            <input class="rounded-pill w-100" type="text" name="name" id="name" placeholder="Username" autocomplete="off" />
+            <div class="field-pass position-relative">
+              <input class="rounded-pill w-100" type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
+              <span class="h-100 d-flex position-absolute justify-content-center align-items-center offset-11 top-0">
+                <i class="fa-regular fa-eye-slash"></i>
+                <i class="hide fa-regular fa-eye"></i>
+              </span>
+            </div>
+            <div class="d-flex flex-row position-relative align-items-center">
+              <input type="checkbox" name="" id="rule" class="custom-checkbox" />
+              <label class="text-wrap" for="rule"> <p class="my-auto ms-2">Remember password</p>
+            </div>
+            <input class="rounded-pill" type="submit" value="Sign In" />
+          </form>
+
+          <a class="test" href="ForgetPassword.html">Forgotten password?</a>
+          <span class="d-flex"><span class="line"></span>   Or   <span class="line"></span></span>
+          <a class="test" href="Register.html">Register Account</a> 
         </div>
-        <div class="accept-rule">
-          <input type="checkbox" name="" id="rule" class="custom-checkbox" />
-            <label class="rule" for="rule">
-              Remember password
         </div>
-        <input type="submit" value="Sign In" />
-      </form>
-    </div>
-    <footer><a class="test" href="ForgetPassword.html">Forgotten password?</a></footer>
+      </div>
     <script src="login.js"></script>
   </body>
 </html>

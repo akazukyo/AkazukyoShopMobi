@@ -10,36 +10,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styleLoginAndRegister.css" />
     <title>Document</title>
   </head>
-  <body>
-    <nav>
-        <a style="color: black" href="Login.html"><i class="fa-solid fa-arrow-right fa-rotate-180 fa-2x"></i></a>
-      </i>
-      <i class="fa-regular fa-circle-question fa-2x"></i>
-    </nav>
-    <span class="icon-user"
-      ><i class="child fa-regular fa-user fa-3x"></i
-    ></span>
-    <h2>SignUp</h2>
-      <p>Tao mot tai khoan de ban co the thoai mai mua hang</p>
-    <div class="content">
-      <form action="">
-        <input type="text" name="name" id="name" placeholder="Username" autocomplete="off" />
-        <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" />
-        <input type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
-        <div class="accept-rule">
-          <input type="checkbox" name="" id="rule" class="custom-checkbox" />
-            <label class="rule" for="rule">
-              <!-- Sử dụng thẻ label để đặt văn bản bên cạnh checkbox -->
-              I here by agree to the
-              <a href="#">terms of services and privacy policy</a>
+  <body class="text-center lh-lg">
+    <div class="container p-0">
+      <div class="d-flex row flex-column justify-content-center align-items-center w-100 m-0">
+        <div class="position-relative col-lg-8 col-md-10 col-sm-10 col-12">
+          <div class="position-absolute top-0 offset-11">
+            <a style="color: black" href="Login.html"><i class="d-none fa-solid fa-arrow-right fa-rotate-180 fa-2x"></i></a>
+          <i class="d-none justify-content-end fa-regular fa-circle-question fa-2x"></i>
+          </div>
+          <span class="d-flex w-auto icon-user rounded-circle border-secondary border border-1 mt-5 mx-auto">
+            <i class="child m-auto rounded-circle p-4 w-auto fa-regular fa-user fa-3x"></i>
+          </span>
+            <h2 class="mb-5">Sign Up</h2>
+
+            <form class="d-flex flex-column" action="">
+              <input class="rounded-pill w-100" type="text" name="name" id="name" placeholder="Username" autocomplete="off" />
+              <input class="rounded-pill w-100" type="email" name="email" id="email" placeholder="Email" autocomplete="off" />
+              <input class="rounded-pill w-100" type="password" name="password" id="password" placeholder="Password" autocomplete="off" />
+              <div class="d-flex flex-row position-relative align-items-center">
+                <input aria-colspan="rounded-pill w-100" type="checkbox" name="" id="rule" class="custom-checkbox" />
+                  <label class="text-wrap" for="rule">
+                    <p class="my-auto ms-2"> I here by agree to the <a href="#">terms of services and privacy policy</a></p>
+              </div>
+              <input class="rounded-pill w-100" type="submit" value="Create an Account" />
+            </form>
+  
+            <span class="test">Already have an account? <a href="Login.html">Sign in</a></span>
         </div>
-        <input type="submit" value="Create an Account" />
-      </form>
     </div>
-    <footer><p class="test">Already have an account? <a href="Login.html">Sign in</a></p></footer>
   </body>
 </html>
